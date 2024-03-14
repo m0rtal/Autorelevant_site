@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Личный кабинет</title>
+</head>
+<body>
+    <h2>Личный кабинет</h2>
+    <p>Добро пожаловать, {{ user.username }}!</p>
+    <p>Это ваш личный кабинет. Здесь будет отображаться информация, специфичная для вашего аккаунта.</p>
+
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Выйти</button>
+    </form>
+
+</body>
+</html>
